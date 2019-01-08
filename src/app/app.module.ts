@@ -4,7 +4,8 @@ import { NgModule } from "@angular/core";
 import { StoreModule } from "@ngrx/store";
  
 import { AppRoutingModule } from "./app-routing/app-routing.module";
- 
+import { StoreDevtoolsModule } from "@ngrx/store-devtools";
+
 import { AppComponent } from "./app.component";
 import { HomeComponent } from "./home/home.component";
 import { NavbarComponent } from "./navbar/navbar.component";
@@ -19,6 +20,7 @@ const customerRoutes: Routes = [{ path: "", component: CustomerComponent }];
     BrowserModule,
     // Import Store module
     StoreModule.forRoot({}),
+    StoreDevtoolsModule.instrument(),
     AppRoutingModule
   ],
   providers: [],
